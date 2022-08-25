@@ -1,0 +1,235 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Amazon" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1417,2063" sap2010:WorkflowViewState.IdRef="Amazon_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="72">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Amazon" sap:VirtualizedContainerService.HintSize="704,1998" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="strUrl">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">https://www.amazon.com/</Literal>
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+      <Variable x:TypeArguments="x:String" Name="strExcelPath">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">C:\Users\rgall\OneDrive\Escritorio\Excel\Barnes.xlsx</Literal>
+        </Variable.Default>
+      </Variable>
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="662,1906" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[strExcelPath]">
+      <ui:ExcelApplicationScope.Body>
+        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="628,1797" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="sd:DataTable" Name="dtTopics" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ExcelReadRange AddHeaders="True" DataTable="[dtTopics]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="586,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" SheetName="Topics">
+              <ui:ExcelReadRange.Range>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" Value="" />
+                </InArgument>
+              </ui:ExcelReadRange.Range>
+            </ui:ExcelReadRange>
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtTopics]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="586,1606" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="552,1491" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="510,1399" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="Simulate" ScopeGuid="f58e0f12-9dab-4ae1-8dba-f33066033b85" Version="V2">
+                      <uix:NApplicationCard.Body>
+                        <ActivityAction x:TypeArguments="x:Object">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="476,1382" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'Search'" EmptyField="True" sap:VirtualizedContainerService.HintSize="434,134" sap2010:WorkflowViewState.IdRef="TypeInto_3" Text="[row.Item(&quot;Topic&quot;).ToString]">
+                              <ui:TypeInto.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4c4c1307-41f3-4a7d-9508-4b977a46f763" InformativeScreenshot="d19b1191d2cdb85eb009b5b79ce04b74" Selector="&lt;webctrl tag='INPUT' type='text' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:TypeInto.Target>
+                            </ui:TypeInto>
+                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Search'" sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+                              <ui:Click.CursorPosition>
+                                <ui:CursorPosition Position="Center">
+                                  <ui:CursorPosition.OffsetX>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:CursorPosition.OffsetX>
+                                  <ui:CursorPosition.OffsetY>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:CursorPosition.OffsetY>
+                                </ui:CursorPosition>
+                              </ui:Click.CursorPosition>
+                              <ui:Click.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e43e82a0-89df-48a5-b2f5-acd0eca22d4f" InformativeScreenshot="ba5f8080577e55b259103f7276d79775" Selector="&lt;webctrl tag='INPUT' type='submit' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:Click.Target>
+                            </ui:Click>
+                            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[ExtractDataTable]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Title'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='UrlTitle'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;true&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column2' Name='Author'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column4' Name='Price'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='span' idx='3' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='text' name2='Column1' attr2='href'&gt;&lt;webctrl tag='span' idx='3' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='h2' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column2' attr='text'&gt;&lt;webctrl tag='span' idx='3' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column4' attr='text'&gt;&lt;webctrl tag='span' idx='3' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;webctrl tag='span' idx='2' /&gt;&lt;/column&gt;&lt;/extract&gt;" ExtractSimilar="True" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NExtractData_3" LimitExtractionTo="Rows" MaximumResults="0" Version="V1">
+                              <uix:NExtractData.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="513, 254, 1197, 7589" FriendlyName="'RESULTS SponsoredSponso…'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='search' tag='DIV' /&gt;" Guid="b06faf4f-c2a0-4352-a7de-06ac1855009a" InformativeScreenshot="c890c27e2113177f34d1bef098a09e95.png" ScopeSelectorArgument="&lt;html app='firefox.exe' htmlwindowname='https://images-na.ssl-images-amazon.com/images/I/11ZsAb1tv9L._RC|11B3-fvRFzL.css_.css?AUIClients/AmazonUICalendar#not-trident' title='Amazon.com : vb.net' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+                              </uix:NExtractData.Target>
+                            </uix:NExtractData>
+                            <ui:SortDataTable ColumnIndex="{x:Null}" DataColumn="{x:Null}" ColumnName="Price" DataTable="[ExtractDataTable]" DisplayName="Sort Data Table" sap:VirtualizedContainerService.HintSize="434,242" sap2010:WorkflowViewState.IdRef="SortDataTable_1" Order="Ascending" OutputDataTable="[ExtractDataTable]" SortOrder="Ascending" />
+                            <ui:FilterDataTable DataTable="[ExtractDataTable]" DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="FilterDataTable_2" OutputDataTable="[ExtractDataTable]" SelectColumnsMode="Keep">
+                              <ui:FilterDataTable.Filters>
+                                <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+                                  <ui:FilterOperationArgument Operand="{x:Null}" BooleanOperator="And" Operator="EMPTY">
+                                    <ui:FilterOperationArgument.Column>
+                                      <InArgument x:TypeArguments="x:String">["Author"]</InArgument>
+                                    </ui:FilterOperationArgument.Column>
+                                  </ui:FilterOperationArgument>
+                                </scg:List>
+                              </ui:FilterDataTable.Filters>
+                              <ui:FilterDataTable.SelectColumns>
+                                <scg:List x:TypeArguments="InArgument" Capacity="4">
+                                  <x:Null />
+                                </scg:List>
+                              </ui:FilterDataTable.SelectColumns>
+                            </ui:FilterDataTable>
+                            <ui:FilterDataTable DataTable="[ExtractDataTable]" DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="FilterDataTable_3" OutputDataTable="[ExtractDataTable]" SelectColumnsMode="Keep">
+                              <ui:FilterDataTable.Filters>
+                                <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+                                  <ui:FilterOperationArgument Operand="{x:Null}" BooleanOperator="And" Operator="EMPTY">
+                                    <ui:FilterOperationArgument.Column>
+                                      <InArgument x:TypeArguments="x:String">["Price"]</InArgument>
+                                    </ui:FilterOperationArgument.Column>
+                                  </ui:FilterOperationArgument>
+                                </scg:List>
+                              </ui:FilterDataTable.Filters>
+                              <ui:FilterDataTable.SelectColumns>
+                                <scg:List x:TypeArguments="InArgument" Capacity="4">
+                                  <x:Null />
+                                </scg:List>
+                              </ui:FilterDataTable.SelectColumns>
+                            </ui:FilterDataTable>
+                            <ui:ExcelWriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[ExtractDataTable]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="434,87" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_1" SheetName="[row.Item(&quot;Topic&quot;).ToString]" />
+                          </Sequence>
+                        </ActivityAction>
+                      </uix:NApplicationCard.Body>
+                      <uix:NApplicationCard.TargetApp>
+                        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Firefox" IconBase64="AAABAAQAMDAAAAEAIACoJQAARgAAACAgAAABACAAqBAAAO4lAAAYGAAAAQAgAIgJAACWNgAAEBAAAAEAIABoBAAAHkAAACgAAAAwAAAAYAAAAAEAIAAAAAAAgCUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///0X///+Z////zP////P////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////w////zP///5P///8/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8k////wP//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////t////x4AAAAAAAAAAAAAAAAAAAAAAAAAAP///0L////z///////////////////////////////////////////////////////////////////////////X7///u+T//5DV//+R1f//csr//1C+//+Cz///kdX//5/Z///L6v//8vr//////////////////////////////////////////////////////////////////////////////////////+3///85AAAAAAAAAAAAAAAA////Lf////D///////////////////////////////////////////////////////////////+85f//csr//xOt//8AqP//AKj//wCn//8Ap///AKf+/wCn//8AqP//AKf//wCn//8Ap///AKj//z64//+Q1f//2PD////////////////////////////////////////////////////////////////////////////q////JAAAAAAAAAAA////zP/////////////////////////////////////////////////////y+v//kNX//xOs//8Ap///AKf//wCo//8Ap///AKf//wCo//8AqP//AKf//wCn/v8Ap///AKj//wCn//8AqP//AKf//wCn//8Ap///AKf//z64//+u4P//////////////////////////////////////////////////////////////////////vQAAAAD///9R////////////////////////////////////////////////8vr//5HV//8TrP//AKj//wCo//8AqP//AKj//wCo//8Ap///AKf//wCn//8AqP//AKf//wCo//8AqP//AKj//wCn//8Ap/7/AKf//wCo//8AqP//AKf//wCo//8Ap///KbL//67g////////////////////////5fT//////////////////////////////////////0L///+l//////////////////////////////////////////+75P//E63//wCn//8Ap///AKf//wCn/v8AqP//AKf//wCo//8psv//UL///4LQ//+R1f//kNX//5DV//+Q1f//kNX//5HV//9hw///UL7//wCo//8Ap/7/AKj//wCn//8Ap///AKj//wCn//9Qvv//5vX/////////////Ub///5DV/////////////////////////////////5b////q////////////////////////////////8vr//3LK//8AqP//AKf//wCn//8AqP//AKj//1C///+R1f//y+r////////////////////////////////////////////////////////////////////////Y7///rd///3LJ//8Trf//AKf+/wCn//8AqP//E63//7zl////////n9r//wCo///l9P///////////////////////////9v////////////////////////////////Y7///Prj//wCn//8Ap///AKf+/1C+//+t3///8vr/////////////////////////////////////////////////////////////////////////////////////////////////////////////vOX//3LK//8Ap///AKf//wCo//+t3///2O///wCn//9zyv////////////////////////////n//////////////////////////9jw//8Trf//AKf//wCn//9yyf//5fT////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////y+v//kNX//xOt//9hw////////xOt//8Trf//////////////////////////////////////////////////u+T//xOt//8AqP//csn//+X0/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////1G///8Ap///5vX////////////////////////////////////////Y7///AKj//1C+///l9f///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////9jv//8Ap///Ub///2HD//+Q1f//csr//wCn//8Ap///y+r////////////////////////////////////////Y8P//ruD////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////L6v//YsP//wCn//8Ap///AKj//wCo//8Ap///2PD///////////////////////////////////////////////////////////////////////////////////////////////////Pz8/+ioqL/VlZU/x0dG/8FBQT/BQUD/x0dHP9WVlX/hoaE/9jY2P////////////////////////////////++vr7/VlZV/6Kiov/////////////////////////////////K6f//yun//8rq///l9P//////////////////////////////////////////////////////////////////////////////////////////////////oqKi/x0dHP8FBQT/BQUE/wUFBP8FBQT/BQUE/wUFBP8FBQP/BQUE/wUFBP9WVlT/5ubm/////////////////7Cwr/8FBQT/BQUE/wUFBP92dnb///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+GhoX/BQUE/wUFBP8FBQT/BQUD/wUFBP8FBQT/BQUE/wQEA/8FBQT/BQUD/wUFA/8FBQT/HR0c/7Cwr///////2dnZ/wUFBP8FBQT/BQUE/wUFBP8FBQT/Z2dm//Ly8v///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////729vf8FBQP/BQUE/wUFBP8FBQT/BQUE/wUFA/8FBQT/BQUE/wUFBP8FBQP/BQUD/wUFBP8FBQT/BQUE/wUFBP+ioqL/MjIw/wUFBP8FBQT/BQUD/wUFA/8FBQT/BQUE/0REQ//y8vL//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////zExMP8FBQT/BQUD/wUFBP8FBQT/BQUE/wUFBP8FBQP/BQUE/wUFBP8FBQT/BQUE/wUFBP8FBQT/BQUE/wUFBP8FBQT/BQUE/wUFBP8FBQT/BQUD/wUFBP8FBQT/BQUE/wUFBP8dHRv/////////////////////////////////////////////////////////////////////////////////////////////////////////////////2dnZ/wUFBP8FBQT/BQUE/wUFBP8FBQT/BQUE/wUFBP8FBQT/BQUE/wUFBP8dHRz/BQUE/wUFBP8FBQT/BQUD/wUFBP8FBQP/BQUE/wUFBP8FBQT/BQUD/wUFBP8FBQT/BQUE/wUFBP8yMjD/////////////////////////////////////////////////////////////////////////////////////////////////////////////////lJST/wUFBP8FBQT/BQUE/wUFBP8FBQT/BQUE/wUFBP8FBQT/HR0c/8zMzP///////////8zMzP8xMTD/BQUE/wUFBP8FBQT/BQUD/wUFA/8FBQT/BQUE/wUFBP8FBQT/BQUE/wUFBP/MzMz/////////////////////////////////////////////////////////////////////////////////////////////////////////////////hoaF/wUFBP8FBQT/BQUE/wUFBP8FBQT/BQUE/wUFBP8FBQP/zMzM///////////////////////y8vL/HR0c/wUFBP8FBQT/BQUE/wUFBP8FBQT/BQUE/wUFBP8FBQP/BQUE/4aGhP//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////VlZV/wUFBP8EBAP/BQUD/wUFA/8FBQT/BQUE/wUFBP9FRUT/////////////////////////////////sLCv/wUFBP8FBQT/BQUE/wUFBP8FBQT/BQUE/wUFBP8FBQT/BQUE/+Xl5f//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////ZmZl/wUFA/8FBQT/BQUD/wUFBP8FBQT/BQUE/wUFBP9VVVT//////////////////////////////////////zExMP8FBQT/BQUE/wUFBP8FBQT/BQUE/wUFBP8FBQT/VlZV////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////lJST/wUFBP8FBQT/BQUE/wUFBP8FBQT/BQUE/wUFBP9WVlX//////////////////////////////////////3Z2dv8FBQT/BQUE/wUFBP8FBQT/BQUE/wUFBP8FBQT/VlZV////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////sbGw/wUFBP8FBQT/BQUE/wUFBP8FBQT/BQUE/wUFA/8dHRz//////////////////////////////////////5SUk/8FBQP/BQUE/wUFA/8FBQT/BQUE/wUFBP8FBQT/VlZU////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8vLy/wUFA/8FBQP/BQUD/wUFBP8FBQT/BQUE/wUFBP8FBQT/oqKi/////////////////////////////////5SUk/8FBQP/BQUE/wUFBP8FBQT/BQUD/wUFBP8FBQP/VlZV/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////3Z2dv8FBQT/BQUE/wUFBP8FBQT/BQUE/wUFA/8FBQT/HR0c/729vf///////////////////////////83Nzf8FBQT/BQUE/wUFBP8FBQT/BQUE/wUFBP8FBQT/VlZV/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+bm5v8dHRz/BQUD/wUFA/8FBQT/BQUE/wUFBP8EBAP/BQUE/wUFBP9WVlX/vb29//Pz8////////////83Nzf8FBQP/BQUE/wUFBP8FBQT/BQUE/wUFA/8FBQT/VlZV//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////++vr7/BQUE/wUFBP8FBQT/BQUE/wUFBP8FBQP/BQUE/wUFBP8FBQT/BQUE/wUFBP8FBQT/VlZU/0REQ/8FBQT/BQUE/wUFBP8FBQP/BQUE/wUFBP8FBQT/VVVU////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////zMzM/x0dG/8FBQT/BQUE/wUFBP8FBQT/BQUE/wUFBP8FBQP/BQUE/wUFBP8FBQT/BQUE/wUFA/8FBQT/BQUE/wUFBP8FBQT/BQUE/wUFA/8FBQP/VVVU//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////Ly8v92dnb/BQUE/wUFBP8FBQT/BQUE/wUFA/8FBQT/BQUE/wUFBP8FBQT/BQUE/wUFA/8FBQP/BQUE/wUFBP8FBQT/BQUE/wUFBP8FBQT/VlZV////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////5ubm/6Kiov9VVVT/BQUE/wUFBP8FBQT/BQUE/wUFBP8FBQT/BQUE/wUFBP8FBQT/BQUE/wUFBP8FBQT/BQUE/wUFBP8FBQP/VlZV/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////9nZ2f/MzMz/lJST/5SUk/9WVlT/VlZV/zExMP8FBQT/BQUE/wUFBP8FBQT/BQUE/wUFBP8FBQT/VlZV/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8zMzP8FBQP/BQUE/wUFA/8FBQT/BAQD/wUFBP8FBQT/VlZV////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8/Pz/8zMzP/MzMz/lJST/5SUk//Z2dn//////////////////////////////////////76+vv8FBQT/BQUE/wUFBP8FBQT/BQUE/wUFBP8FBQP/VlZV/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////5WVk/8FBQT/BQUE/wUFBP8FBQT/BQUE/wUFBP9nZ2b//////////////////////////////////////5SUk/8FBQT/BQUE/wUFA/8FBQT/BQUE/wUFBP8FBQT/dnZ2/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////1ZWVP8FBQT/BQUE/wUFBP8FBQT/BQUD/wUFA/8dHRz/8/Pz/////////////////////////////////3Z2dv8FBQP/BQUE/wUFBP8FBQT/BQUE/wUFBP8FBQT/lJST/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////6Ghof8FBQT/BQUE/wUFBP8FBQT/BQUE/wUFA/8FBQT/dnZ2////////////////////////////2dnZ/x0dHP8FBQT/BQUE/wUFBP8FBQT/BQUD/wUFBP8FBQT/lJST/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+bm5v8FBQT/BQUE/wUFBP8FBQT/BQUE/wUFA/8FBQT/BAQD/zExMP+xsbD/zMzM/8zMzP+UlJP/HR0c/wUFBP8FBQT/BQUE/wUFBP8FBQT/BQUE/wUFBP8FBQT/zMzM//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////92dnb/BQUE/wUFBP8FBQT/BQUE/wUFBP8FBQT/BQUE/wUFBP8FBQT/BQUE/wUFBP8FBQT/BQUE/wUFBP8FBQT/BQUE/wUFBP8FBQT/BQUE/wUFBP8dHRv///////////////////////////////////////////////////////////////////////////n////t///////////////////////////////////////////////////////////m5ub/Hh4c/wUFBP8FBQT/BQUE/wUFBP8FBQT/BQUE/wUFBP8FBQT/BQUE/wUFBP8FBQT/BQUE/wUFBP8FBQT/BQUE/wQEA/8FBQP/BQUD/wUFBP+UlJP//////////////////////////////////////////////////////////////////////////97///+o////////////////////////////////////////////////////////////////2dnZ/x0dG/8FBQT/BQUE/wUFA/8FBQT/BQUE/wUFBP8FBQT/BQUE/wUFBP8FBQT/BQUE/wUFBP8FBQT/BQUE/wUFBP8FBQP/BQUE/0VFRP/z8/P//////////////////////////////////////////////////////////////////////////5b///9U/////////////////////////////////////////////////////////////////////9nZ2f8xMTD/BQUE/wUFBP8FBQP/BQUE/wUFBP8FBQT/BQUD/wUFBP8FBQT/BQUE/wUFBP8FBQT/BQUE/wUFBP8FBQT/VVVU//Ly8v///////////////////////////////////////////////////////////////////////////////0L///8D////z///////////////////////////////////////////////////////////////////////////lZWU/zExMP8FBQT/BQUD/wUFA/8FBQT/BQUE/wUFBP8FBQT/BQUE/wUFA/8FBQT/BQUD/zExMP+xsbD/////////////////////////////////////////////////////////////////////////////////////wwAAAAAAAAAA////MP////b////////////////////////////////////////////////////////////////////////////////Z2dn/lJST/1ZWVf9WVlX/BAQD/wUFBP8FBQT/RUVD/1ZWVf+UlJP/zMzM///////////////////////////////////////////////////////////////////////////////////////////w////JwAAAAAAAAAAAAAAAP///0v////z//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////D///8/AAAAAAAAAAAAAAAAAAAAAAAAAAD///8t////yf//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////w////yQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///0v///+f////z///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////zP///5n///9FAAAAAAAAAAAAAAAAAAAAAAAAAAD4AAAAAB8AAOAAAAAABwAAwAAAAAADAACAAAAAAAEAAIAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAgAAAAAABAADAAAAAAAMAAOAAAAAABwAA+AAAAAAfAAAoAAAAIAAAAEAAAAABACAAAAAAAIAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////Uf///5/////S///////////////////////////////////////////////////////////////////////////////////////////////////////////////P////nP///0gAAAAAAAAAAAAAAAAAAAAA////GP///7H//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////6X///8SAAAAAP///wb////P////////////////////////////////////////////////5fX//67g//+R1f//UL7//1C+//9Rv///YsT//5DU//+85f//8vr//////////////////////////////////////////////////////8P///8D////df//////////////////////////////////////////ruD//z24//8AqP//AKf//wCo//8Ap///AKj//wCo//8Ap/7/AKf//wCn//8AqP//csr//8vq/////////////////////////////////////////////////2b////S////////////////////////////////y+r//ymy//8Ap///AKj//wCo//8Ap///AKf//wCn//8Ap///AKj//wCn//8Ap///AKj//wCo//8AqP//AKj//1C////Y8P///////8rq///Y7///////////////////////w/////z/////////////////////8vr//3LJ//8AqP//AKf//wCn/v9ixP//kNT//8vq///y+v////////////////////////L6///L6v//n9r//2LE//8Trf//AKf//wCo//+u4P//vOX//z65///////////////////////w//////////////////////L6//8+uP//AKf//1C+//+t3///8/r///////////////////////////////////////////////////////////////////////+85f//UL7//wCo///Y7///AKf//8rp///////////////////////////////////Y7///E63//1C+///L6v////////////////////////////////////////////////////////////////////////////////////////P7///L6v//5fT///L6//8ps///kNT//////////////////////////////////5DU//+t3///////////////////////////////////////////////////////////////////////////////////////////////////5fX//1C+//8AqP//AKf//wCn//+Q1f//////////////////////////////////////////////////////////////////8vLy/5SUk/9FRUT/BQUE/wQEA/8yMjD/Z2dm/8zMzP////////////////+GhoX/Z2dm//Lz8////////////+X0///L6v//yun///L6//////////////////////////////////////////////////////////////Ly8v9FRUT/BQUE/wUFBP8FBQT/BQUE/wQEA/8FBQT/BQUD/3Z2dv/z8/P/dnZ2/wUFBP8FBQP/MTEw/9nZ2f//////////////////////////////////////////////////////////////////////////////////////VlZV/wUFBP8FBQT/BQUE/wUFBP8FBQT/BQUE/wUFBP8FBQT/BQUE/zIyMP8FBQT/BQUE/wUFBP8FBQT/HR0c/9nZ2f///////////////////////////////////////////////////////////////////////////+bm5v8FBQT/BQUE/wUFBP8FBQT/BQUE/wUFA/8xMTD/HR0c/wUFA/8FBQT/BQUE/wUFBP8FBQT/BQUE/wUFA/8FBQT/lJST////////////////////////////////////////////////////////////////////////////vb29/wUFBP8EBAP/BQUE/wUFBP8FBQT/dnZ2////////////oqKi/wUFBP8EBAP/BQUE/wUFBP8FBQP/BQUE/zIyMf/y8vL///////////////////////////////////////////////////////////////////////////+UlJP/BQUE/wUFBP8FBQT/BQUE/wUFBP/y8vL/////////////////Z2dm/wUFBP8FBQT/BQUE/wUFBP8FBQT/sbGw/////////////////////////////////////////////////////////////////////////////////7GxsP8FBQT/BQUD/wUFBP8FBQT/BQUD//////////////////////+9vb3/BQUE/wUFBP8FBQT/BQUE/wUFBP/m5ub/////////////////////////////////////////////////////////////////////////////////2dnZ/wUFBP8FBQT/BQUE/wUFBP8FBQT/zMzM/////////////////+bm5v8FBQT/BQUE/wUFA/8FBQT/BQUD////////////////////////////////////////////////////////////////////////////////////////////MTEw/wUFBP8FBQT/BQUE/wUFBP9FRUT/5eXl/////////////////wUFBP8FBQT/BQUE/wUFBP8FBQT////////////////////////////////////////////////////////////////////////////////////////////MzMz/BQUE/wUFA/8FBQT/BQUD/wUFBP8FBQT/dnZ2/5SUk/+9vb3/BQUE/wUFBP8FBQT/BQUE/wUFA/////////////////////////////////////////////////////////////////////////////////////////////////+wsK//HR0c/wUFBP8FBQT/BQUE/wUFBP8FBQT/BQUD/wUFBP8FBQT/BQUE/wUFBP8FBQT/BQUE///////////////////////////////////////////////////////////////////////////////////////////////////////m5ub/hoaF/zIyMP8FBQT/BQUE/wUFBP8FBQT/BQUD/wUFBP8FBQT/BQUE/wUFBP8FBQP//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+bm5v/MzMz/lJST/5SUk/9WVlX/BQUE/wQEA/8FBQT/BQUE/wUFA//////////////////////////////////////////////////////////////////////////////////////////////////y8vL/zMzM/8zMzP/Nzc3///////////////////////////8FBQT/BQUE/wUFBP8FBQT/BQUD////////////////////////////////////////////////////////////////////////////////////////////Z2dm/wUFBP8FBQT/BQUE/wUFBP/y8vL/////////////////2dnZ/wUFA/8FBQP/BQUD/wUFBP8FBQT///////////////////////////////////////////////////////////////////////////////////////////9mZmX/BQUE/wUFBP8FBQT/BQUE/3Z2dv////////////////92dnb/BQUE/wUFBP8FBQT/BQUE/wUFBP///////////////////////////////////////////////////////////////////////////////////////////7CwsP8FBQT/BQUE/wUFBP8FBQT/BQUE/zIyMP9WVlX/RUVE/wUFBP8FBQT/BQUE/wUFBP8FBQT/RUVD/////////////////////////////////////////////////////////////////////////////////////////////////1ZWVf8FBQT/BQUE/wUFBP8EBAP/BQUD/wUFBP8FBQT/BQUE/wUFBP8FBQT/BQUE/wUFBP+wsK/////////////////////////////////////////////////2////2///////////////////////////////////////////8vLy/0VFRP8FBQP/BQUE/wUFBP8FBQT/BQUE/wUFBP8FBQT/BQUE/wUFBP8FBQT/dnZ2/////////////////////////////////////////////////////8z///9+/////////////////////////////////////////////////////7Cwr/9FRUT/BQUE/wUFBP8FBQT/BQUD/wUFBP8FBQT/RUVE/7Cwr///////////////////////////////////////////////////////////b////wz////b///////////////////////////////////////////////////////////y8vL/zMzM/8zMzP/MzMz/zc3N/+bm5v///////////////////////////////////////////////////////////////9L///8GAAAAAP///yf////b///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////S////HgAAAAAAAAAAAAAAAP///wz///94////2P/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////S////cv///wkAAAAAAAAAAOAAAAeAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAHAAAADKAAAABgAAAAwAAAAAQAgAAAAAABgCQAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8G////hP///9v/////////////////////////////////////////////////////////////////////////////////////////2////4T///8GAAAAAP///wz////P///////////////////////////y+v//vOX//5DV//+C0P//YsT//5DU//+u4P//5fT////////////////////////////////////////////G////Cf///4T/////////////////////8vr//3LK//8Trf//AKj//wCn//8Ap///AKf+/wCo//8AqP//AKf//1C+///K6v//////////////////////////////////////e////9v///////////////+u4P//E6z//wCn//8AqP//AKf//wCo//8Ap///AKf//wCo//8AqP//AKf//wCo//8Ap///kNX/////////////kdX//9jw////////////z/////D//////////4LP//8Ap///AKf//wCo//8qs///csr//5DV///K6f//y+r//8rq///L6v//n9n//3LK//8TrP//AKf//5/a////////kNX//1C+////////////7f////D/////kdX//wCo//8AqP//csn//9jw///////////////////////////////////////////////////y+v//n9r//4LQ////////yun//wCn///l9P//////8P////DK6v//AKf//1C+///l9P//////////////////////////////////////////////////////////////////////////////////yun//wCn//+85f//////8P////Aps///kNX///////////////////////////////////////////////////////////////////////+g2v//KrP//2LE//+Q1P//csr//wCn//+R1f//////8P////C75P////////////////////////////+xsbD/VlZV/1VVVP9WVlX/oaGh//Ly8v/y8vL/dnZ2/7Cwr///////vOT//2HD//8Ap///AKj//wCn/v+85f//////8P////D//////////////////////////4aGhf8EBAP/BQUD/wUFBP8EBAP/BQUD/0VFRP9nZ2b/BQUE/wUFBP92dnb/////////////////2O///+b1////////////8P////D/////////////////////8vLy/wUFBP8FBQT/BQUE/wUFA/9EREP/HR0b/wUFBP8FBQT/BQUD/wUFBP8FBQT/////////////////////////////////////8P////D/////////////////////zMzM/wUFBP8FBQT/BQUE/3Z2dv//////8vLy/x0dHP8FBQT/BQUE/wUFBP+UlJP/////////////////////////////////////8P////D/////////////////////zc3N/wUFBP8FBQT/BQUE/5SUk////////////4aGhf8FBQT/BQUE/wUFBP/MzMz/////////////////////////////////////8P////D//////////////////////////x0dG/8FBQT/BQUE/0VFQ//z8/P//////76+vv8FBQT/BQUE/wUFBP/Nzc3/////////////////////////////////////8P////D//////////////////////////7CwsP8FBQP/BQUE/wUFBP8dHRv/dnZ2/3Z2dv8FBQP/BQUE/wUFBP/MzMz/////////////////////////////////////8P////D///////////////////////////////++vr7/MTEw/wUFBP8FBQP/BQUD/wUFBP8FBQT/BQUE/wUFBP/MzMz/////////////////////////////////////8P////D//////////////////////////////////////////+Xl5f/MzMz/lJST/3Z2dv8FBQT/BQUE/wUFBP/MzMz/////////////////////////////////////8P////D//////////////////////////4aGhf9WVlX/HR0b/729vf///////////7Cwr/8FBQP/BQUE/wUFBP/MzMz/////////////////////////////////////8P////D//////////////////////////2ZmZf8FBQT/BQUE/x0dHP++vr7/zMzM/0VFRP8FBQT/BQUE/wUFBP/y8vL/////////////////////////////////////8P////D//////////////////////////8zMzP8FBQT/BQUE/wUFBP8FBQT/BQUE/wUFBP8FBQT/BQUD/1ZWVP/29vb/////////////////////////////////////7f///9X///////////////////////////////+wsK//HR0c/wUFBP8FBQT/BQUE/wUFBP8FBQT/MTEw/9vb2//6+vr/////////////////////////////////////z////3v/////////////////////////////////////8vLy/76+vv+UlJP/lJST/5SUk/++vr7/////////////////////////////////////////////////////df///wn////D//////////////////////////////////////////////////////////////////////////////////////////////////////////////+9////BgAAAAD///8D////df///9L/////////////////////////////////////////////////////////////////////////////////////////z////3X///8DAAAAAIAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAABACgAAAAQAAAAIAAAAAEAIAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAAAAD///8G////lv////b/////////////////////////////////////////////////////////9v///5b///8G////iv/////////////////////Y7///n9r//5DV//+Q1P//vOT/////////////////////////////////iv///+f//////////8vq//9Qvv//AKj//wCn//8Ap///AKf+/wCn//8ps///u+T////////y+v//8vr//////+f////w/////67g//8AqP//AKj//z24//+C0P//kNX//5DU//+R1f//UL7//wCn//+u4P//vOX//4LQ///////w////8Lzl//8AqP//csn//+bz///////////////////////////////////l9P//rd///9jv//8Trf//////8P////Aqs///2O//////////////////////////////////////////////Ur7//3LK//+C0P//AKf///////D////w5vX/////////////zMzM/x0dG/8FBQT/HR0b/5SUk/9WVlT/RUVD/+fu8/+i2P7/csr//3LK///////w////8P///////////////zExMP8FBQT/BQUE/0VFRP8FBQP/BQUE/wUFBP+UlJP/////////////////////8P////D///////////////8FBQT/BQUE/4aGhP//////ZmZl/wUFBP8FBQT/8vLy//////////////////////D////w////////////////VlZV/wUFBP8yMjD/5ubm/5SUk/8FBQT/BQUE///////////////////////////w////8P///////////////9nZ2f8yMjD/BQUE/wUFBP8FBQT/BQUE/wUFBP//////////////////////////8P////D////////////////m5ub/zMzM/729vf+wsK//VlZV/wUFBP8FBQT///////////////////////////D////w////////////////Z2dm/wUFBP9FRUT/2NjY/2dnZv8FBQT/HR0c///////////////////////////w////5////////////////8zMzP8FBQP/BQUE/wUFBP8FBQT/BQUE/3Z2dv//////////////////////////5////4f/////////////////////2dnZ/3Z2dv9VVVT/VlZV/6Kiov///////////////////////////////4r///8G////jf///+T/////////////////////////////////////////////////////////5P///43///8GAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==" InformativeScreenshot="4f267c8a3e34b6f354b77d2a1db1dbb7.png" Selector="&lt;html app='firefox.exe' htmlwindowname='https://images-na.ssl-images-amazon.com/images/I/11ZsAb1tv9L._RC|11B3-fvRFzL.css_.css?AUIClients/AmazonUICalendar#not-trident' title='Amazon.com : vb.net' /&gt;" Url="[strUrl]" />
+                      </uix:NApplicationCard.TargetApp>
+                    </uix:NApplicationCard>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+            </ui:ForEachRow>
+          </Sequence>
+        </ActivityAction>
+      </ui:ExcelApplicationScope.Body>
+    </ui:ExcelApplicationScope>
+  </Sequence>
+</Activity>
